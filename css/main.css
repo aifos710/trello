@@ -1,0 +1,29 @@
+body{
+	box-sizing: border-box;
+	background-color: #838C91;
+}
+
+span{
+	display: inline-block;
+	height: 45px;
+	width: 250px;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	color: #CFD1D3;
+	background-color:#747C80;
+}
+
+span:hover{
+	background-color: #2a2a2a;
+}
+
+.input{
+	
+}
+
+
+.content2{
+	background-color: #E2E4E6;
+	display: inline-block;
+}
