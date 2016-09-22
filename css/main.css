@@ -1,29 +1,41 @@
 body{
 	box-sizing: border-box;
-	background-color: #838C91;
+	background-color: #B04632;
 }
+ h1{
+ 	color:#CA9D94;
+ 	font-weight: bold;
+ }
 
 span{
 	display: inline-block;
 	height: 45px;
 	width: 250px;
-	border: 1px solid black;
 	text-align: center;
 	padding: 10px;
 	color: #CFD1D3;
-	background-color:#747C80;
+	background-color:#9B3E2C;
+	border-radius: 5px;
 }
 
 span:hover{
-	background-color: #2a2a2a;
+	background-color: #6e2f1a;
 }
-
-.input{
-	
-}
-
 
 .content2{
 	background-color: #E2E4E6;
 	display: inline-block;
+	height: 80px;
+	width: 250px;
+	padding: 5px;
+	border-radius:5px;
+}
+
+button{
+	width: 70px !important;
+	margin-top: 7px;
+}
+
+a{
+	color:gray;
 }
