@@ -34,6 +34,7 @@ window.addEventListener("load", function() {
 		boton.style.display = "none";
 		input.style.display = "none";
 		icon.style.display = "none";
+
 		//crear otro div
 		var titulo = document.createElement("div");
 		titulo.innerHTML = valorInput;
@@ -43,7 +44,6 @@ window.addEventListener("load", function() {
 		var aText = document.createTextNode("Añadir una lista...")
 		link.appendChild(aText);
 		content.insertBefore(link, content.childNodes[1]);
-
 
 	})
 		
