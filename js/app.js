@@ -1,51 +1,55 @@
-window.addEventListener("load", function() {
-	var content = document.getElementById("content");
-	var lista = document.getElementById("lista");
 
-	lista.addEventListener("click",function(){
-		lista.style.display = "none";
+window.addEventListener("load", function() { 
+	
+	var section = document.getElementById("section"); 
+	var contenedor = document.getElementById("contenedor"); 
+	var lista = document.getElementById("lista"); 
+	var formulario = document.getElementById("formulario"); 
+	var tInput = document.getElementById("tInput"); 
+	var boton = document.getElementById("boton"); 
+	var card = document.getElementById("card");
 
-		var form = document.createElement("form");
-		content.insertBefore(form, content.childNodes[0]);
+//version 1  creando desde html
+lista.addEventListener("click", function(){ // pq al hacer click en lista quiero que  pase algo
+	lista.classList.add("none");
+	//darle hover en css
+	formulario.classList.remove("none");
+	contenedor.classList.add("bgContenedor");
 
-		var input = document.createElement("input");
-		form.insertBefore(input, form.childNodes[0]).classList.add("form-control");
-		input.placeholder = "Añadir una lista..."
 
-		var boton = document.createElement("button");
-		var texto = document.createTextNode("Guardar");
-		boton.appendChild(texto);
-		form.insertBefore(boton, form.childNodes[1]);
-
-		boton.classList.add("btn-success", "btn-block", "btn", "btn-sm", "pull-left");
-		boton.style.display = "inline-block";
-
-		var icon = document.createElement("icon");
-		form.insertBefore(icon, form.childNodes[2]).classList.add("close");
-		icon.classList.add("icon-cross");
-		icon.classList.add("cross");
-
-		content.classList.add("content2");
-
-	boton.addEventListener("click", function(e) {
-		e.preventDefault();
-		var valorInput = input.value;
-		//ocultar todo display none
-		boton.style.display = "none";
-		input.style.display = "none";
-		icon.style.display = "none";
-
-		//crear otro div
-		var titulo = document.createElement("div");
-		titulo.innerHTML = valorInput;
-		content.insertBefore(titulo, content.childNodes[0]);
-		
-		var link = document.createElement("a");
-		var aText = document.createTextNode("Añadir una lista...")
-		link.appendChild(aText);
-		content.insertBefore(link, content.childNodes[1]);
-
-	})
-		
-	});
 });
+
+//version 2
+
+boton.addEventListener("click", function(e){
+	e.preventDefault();
+	addText()//como es boton se necesita esto para que no se redireccione
+	formulario.classList.add("none"); //desparece
+	lista.classList.add("none");//desparece
+	card.style.display ="block";//aparece card de html
+	card.classList.add("gray");
+	
+	newAdd();
+});
+
+function newAdd(){
+	var newSpan = document.createElement("div");//creando nuevo span que va al lado
+	section.appendChild(newSpan);
+	lista.classList.remove("none");
+	newSpan.classList.add("bgContenedor");
+	newSpan.appendChild(lista);
+	
+	
+}
+
+function addText(){
+	var titulo = tInput.value; //titulo de tarjeta nueva
+	card1.innerHTML = titulo; // donde se imprimira
+
+}
+
+});
+
+
+
+	
